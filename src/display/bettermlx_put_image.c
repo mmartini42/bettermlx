@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bettermlx_destroy_window.c                         :+:      :+:    :+:   */
+/*   bettermlx_put_image.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mathmart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/25 20:42:26 by mathmart          #+#    #+#             */
-/*   Updated: 2021/11/25 20:42:27 by mathmart         ###   ########.fr       */
+/*   Created: 2021/11/29 15:07:19 by mathmart          #+#    #+#             */
+/*   Updated: 2022/06/25 19:45:47 by mathmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Solong.h"
+#include "bettermlx.h"
 
-void	*bettermlx_destroy_window(t_window **window)
+void	bettermlx_put_image(t_window *window, \
+	t_image *image, \
+	int x, \
+	int y)
 {
-	if (*window != NULL)
+	int				current_x;
+	int				current_y;
+
+	current_y = -1;
+	while (++current_y < image->height)
 	{
-		bettermlx_destroy_image(*window, &(*window)->image);
-		mlx_destroy_window((*window)->mlx_ptr, (*window)->win_ptr);
-		mlx_destroy_mlx((*window)->mlx_ptr);
-		free(*window);
+		current_x = -1;
+		while (++current_x < image->width)
+			bettermlx_pixel_put(window,
+				create_vector(x + current_x, y + current_y, 0),
+				bettermlx_get_color(image, current_x, current_y),
+				1);
 	}
-	return (NULL);
 }

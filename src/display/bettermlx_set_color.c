@@ -6,11 +6,11 @@
 /*   By: mathmart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 20:41:49 by mathmart          #+#    #+#             */
-/*   Updated: 2021/11/29 15:02:21 by mathmart         ###   ########.fr       */
+/*   Updated: 2022/06/25 19:45:47 by mathmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Solong.h"
+#include "bettermlx.h"
 //t_image == image principale
 
 void	bettermlx_set_color(t_image *image, t_vector3 pixel_coordinates,

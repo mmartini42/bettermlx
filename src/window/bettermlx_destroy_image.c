@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bettermlx_get_color.c                              :+:      :+:    :+:   */
+/*   bettermlx_destroy_image.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mathmart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/25 20:41:27 by mathmart          #+#    #+#             */
-/*   Updated: 2021/11/25 20:41:28 by mathmart         ###   ########.fr       */
+/*   Created: 2021/11/25 20:42:21 by mathmart          #+#    #+#             */
+/*   Updated: 2022/06/25 19:45:47 by mathmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Solong.h"
+#include "bettermlx.h"
 
-t_color	bettermlx_get_color(t_image *image, int x, int y)
+void	*bettermlx_destroy_image(t_window *window, t_image **image)
 {
-	unsigned char	*position;
-
-	position = bettermlx_get_memory_position(image, x, y);
-	if (position == NULL)
-		return (create_color(0, 0, 0, 0));
-	return (create_color(position[3], position[2], position[1], position[0]));
+	if (*image != NULL)
+	{
+		mlx_destroy_image(window->mlx_ptr, (*image)->img_ptr);
+		free(*image);
+		*image = NULL;
+	}
+	return (NULL);
 }

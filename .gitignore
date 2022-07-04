@@ -50,3 +50,13 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Personal configuration
+*.o
+*.a
+cub3D
+.DS_Store
+_*
+*.log
+.idea/
+.vscode/

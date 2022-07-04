@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mathmart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/25 11:32:26 by lduplain          #+#    #+#             */
-/*   Updated: 2021/11/29 17:18:59 by mathmart         ###   ########.fr       */
+/*   Created: 2021/03/25 11:32:26 by mathmart          #+#    #+#             */
+/*   Updated: 2022/07/04 20:57:11 by mathismartini    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 **	START CUSTOM INCLUDES
 */
 
-# include "Solong.h"
+# include "bettermlx.h"
 
 /*
 **	END CUSTOM INCLUDES

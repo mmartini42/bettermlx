@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bettermlx_register_loop.c                          :+:      :+:    :+:   */
+/*   bettermlx_render.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mathmart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/25 20:42:03 by mathmart          #+#    #+#             */
-/*   Updated: 2021/11/25 20:42:04 by mathmart         ###   ########.fr       */
+/*   Created: 2021/11/25 20:41:44 by mathmart          #+#    #+#             */
+/*   Updated: 2022/06/25 19:45:47 by mathmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Solong.h"
+#include "bettermlx.h"
 
-void	bettermlx_register_loop(t_window *window,
-	void *param, int (*funct_ptr)())
+void	bettermlx_render(t_window *window)
 {
-	mlx_loop_hook(window->mlx_ptr, funct_ptr, param);
-	mlx_loop(window->mlx_ptr);
+	mlx_put_image_to_window(window->mlx_ptr, \
+	window->win_ptr, \
+	window->image->img_ptr, \
+	0, \
+	0);
 }

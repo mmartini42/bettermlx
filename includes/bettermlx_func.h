@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mathmart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/25 11:42:09 by lduplain          #+#    #+#             */
-/*   Updated: 2021/11/29 15:21:22 by mathmart         ###   ########.fr       */
+/*   Created: 2021/03/25 11:42:09 by mathmart          #+#    #+#             */
+/*   Updated: 2022/07/04 21:01:36 by mathismartini    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,8 @@
 /*
 **	START CUSTOM INCLUDES
 */
-
-#include "Solong.h"
-
+# include "bettermlx_struct.h"
+# include "bettermlx.h"
 /*
 **	END CUSTOM INCLUDES
 */

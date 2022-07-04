@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bettermlx_hook.c                                   :+:      :+:    :+:   */
+/*   bettermlx_get_memory_position.c                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mathmart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/25 20:41:58 by mathmart          #+#    #+#             */
-/*   Updated: 2021/11/25 20:41:59 by mathmart         ###   ########.fr       */
+/*   Created: 2021/11/25 20:41:32 by mathmart          #+#    #+#             */
+/*   Updated: 2022/06/25 19:45:47 by mathmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Solong.h"
+#include "bettermlx.h"
 
-void	bettermlx_hook(
-	t_window *window,
-	t_x11event x11event,
-	int (*funct)(),
-	void *param)
+unsigned char	*bettermlx_get_memory_position(t_image *image, int x, int y)
 {
-	mlx_hook(window->win_ptr, x11event, 0, funct, param);
+	unsigned char	*position;
+
+	if (x < 0 || y < 0 || x >= image->width || y >= image->height)
+		return (NULL);
+	position = ((unsigned char *)image->img_addr) + y * image->size_line
+		+ x * 4;
+	return (position);
 }

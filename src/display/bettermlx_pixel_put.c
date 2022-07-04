@@ -6,11 +6,11 @@
 /*   By: mathmart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 20:41:39 by mathmart          #+#    #+#             */
-/*   Updated: 2021/11/29 16:48:23 by mathmart         ###   ########.fr       */
+/*   Updated: 2022/06/25 19:45:47 by mathmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Solong.h"
+#include "bettermlx.h"
 
 void	bettermlx_pixel_put(
 	t_window *window,

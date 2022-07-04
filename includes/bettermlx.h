@@ -1,33 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bettermlx_put_image.c                              :+:      :+:    :+:   */
+/*   bettermlx.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mathmart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/29 15:07:19 by mathmart          #+#    #+#             */
-/*   Updated: 2021/11/29 17:15:58 by mathmart         ###   ########.fr       */
+/*   Created: 2022/06/25 19:43:25 by mathmart          #+#    #+#             */
+/*   Updated: 2022/07/04 21:00:33 by mathismartini    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Solong.h"
+#ifndef BETTERMLX_H
+# define BETTERMLX_H
 
-void	bettermlx_put_image(t_window *window, \
-	t_image *image, \
-	int x, \
-	int y)
-{
-	int				current_x;
-	int				current_y;
+# include "libft.h"
+# include "bettermlx_struct.h"
+# include "bettermlx_func.h"
+# include "mlx.h"
 
-	current_y = -1;
-	while (++current_y < image->height)
-	{
-		current_x = -1;
-		while (++current_x < image->width)
-			bettermlx_pixel_put(window,
-				create_vector(x + current_x, y + current_y, 0),
-				bettermlx_get_color(image, current_x, current_y),
-				1);
-	}
-}
+#endif

@@ -1,0 +1,16 @@
+SRCS += 
+SRCS += src/display/bettermlx_clean_display.c
+SRCS += src/display/bettermlx_draw_line.c
+SRCS += src/display/bettermlx_get_color.c
+SRCS += src/display/bettermlx_get_memory_position.c
+SRCS += src/display/bettermlx_pixel_put.c
+SRCS += src/display/bettermlx_put_image.c
+SRCS += src/display/bettermlx_render.c
+SRCS += src/display/bettermlx_set_color.c
+SRCS += src/hook/bettermlx_hook.c
+SRCS += src/hook/bettermlx_register_loop.c
+SRCS += src/window/bettermlx_destroy_image.c
+SRCS += src/window/bettermlx_destroy_window.c
+SRCS += src/window/bettermlx_init_image.c
+SRCS += src/window/bettermlx_init_window.c
+SRCS += src/window/bettermlx_init_xpm_image.c
