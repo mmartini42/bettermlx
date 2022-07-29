@@ -388,5 +388,5 @@ typedef enum e_x11event
 
 <h5>La fonction:</h5>
 
-- Recupere l'heure avec la fonction() ```gettimeofday```<br
+- Recupere l'heure avec la fonction() ```gettimeofday```<br>
 <b><i>Retourne l'heure en milliseconds<i></b>
