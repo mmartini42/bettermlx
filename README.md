@@ -9,34 +9,34 @@
 - # Fonctions
 
 - Initialisation de la window<br>
--<a href="#Init_window"><code>t_window *bettermlx_init_window(char *title, int width, int height, int divider);</code></a>
+<a href="#Init_window"><code>t_window *bettermlx_init_window(char *title, int width, int height, int divider);</code></a>
 - Destruction de la window<br>
--<a href="#Destroy_window"><code>void *bettermlx_destroy_window(t_window **window);</code></a>
+<a href="#Destroy_window"><code>void *bettermlx_destroy_window(t_window **window);</code></a>
 - Initialisation de l'image<br>
 -<a href="#Init_img"><code>t_image	*bettermlx_init_xpm_image(t_window *window, char *path);</code></a>
 - Destruction de l'image<br>
--<a href="#Destroy_img"><code>void *bettermlx_destroy_image(t_window *window, t_image **image);</code></a>
+<a href="#Destroy_img"><code>void *bettermlx_destroy_image(t_window *window, t_image **image);</code></a>
 - Init Image .xmp<br>
--<a href="#Xmp_img"><code>t_image *bettermlx_init_xpm_image(t_window *window, char *path);</code></a>
+<a href="#Xmp_img"><code>t_image *bettermlx_init_xpm_image(t_window *window, char *path);</code></a>
 - Recupere la position d'un pixel dans la memoire<br>
--<a href="Mem_position"><code>unsigned char *bettermlx_get_memory_position(t_image *image, int x, int y);</code></a>
+<a href="Mem_position"><code>unsigned char *bettermlx_get_memory_position(t_image *image, int x, int y);</code></a>
 - Recupere la couleur d'un pixel<br>
--<a href="#Img_color"><code>t_color bettermlx_get_color(t_image *image, int x, int y);</code></a>
+<a href="#Img_color"><code>t_color bettermlx_get_color(t_image *image, int x, int y);</code></a>
 - Met la couleur d'un pixel <br>
--<a href="#Set_pixel"><code>void bettermlx_pixel_put(t_window *window, t_vector3 pixel_coordinates, t_color color, float darkness);</code></a>
+<a href="#Set_pixel"><code>void bettermlx_pixel_put(t_window *window, t_vector3 pixel_coordinates, t_color color, float darkness);</code></a>
 
 - Affiche une ligne<br>
--<a href="#draw_line"><code>void bettermlx_draw_line(t_window *window, t_vector3 xy1, t_vector3 xy2, t_color color);</code></a>
+<a href="#draw_line"><code>void bettermlx_draw_line(t_window *window, t_vector3 xy1, t_vector3 xy2, t_color color);</code></a>
 - Netoie la fenetre<br>
--<a href="#clean_display"><code>void bettermlx_clean_display(t_window *window);</code></a>
+<a href="#clean_display"><code>void bettermlx_clean_display(t_window *window);</code></a>
 - Fait un rendu de la window<br>
--<a href="#Render"><code>void	bettermlx_render(t_window *window);</code></a>
+<a href="#Render"><code>void	bettermlx_render(t_window *window);</code></a>
 - Enregistre un nouveau hook<br>
--<a href="#hook"><code>void	bettermlx_hook(t_window *window, t_x11event x11event, int (*funct)(), void *param);</code></a>
+<a href="#hook"><code>void	bettermlx_hook(t_window *window, t_x11event x11event, int (*funct)(), void *param);</code></a>
 - Execute une boucle<br>
--<a href="#loop_hook"><code>void	bettermlx_register_loop(t_window *window, void *param, int (*funct_ptr)());</code></a>
+<a href="#loop_hook"><code>void	bettermlx_register_loop(t_window *window, void *param, int (*funct_ptr)());</code></a>
 - Recupere le temps<br>
--<a href="#Time"><code>long long	bettermlx_get_time(void);</code></a>
+<a href="#Time"><code>long long	bettermlx_get_time(void);</code></a>
 - # Structures
 
 - <a href="#Struct_window"><code>t_window</code></a>
